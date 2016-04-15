@@ -18,3 +18,20 @@ This is a Hiearachical Fuse FS implementation in Python.
 This file executes the basic file system operations and their result.
 
 5. Further operations can be carried out by changing to the 'fusemount' directory.
+
+---------------------Remote Hierachical FS Implementation --------------------------
+1. Create a mountpoint (directory to mount the File system, say 'fusemount') in X. 
+
+   mkdir fusemount
+   directory structure: X/fusemount
+
+2. Start a server instance.
+   python simpleht.py
+
+3. To mount the filesystem, from directory X, execute:
+   python remoteHierarchicalFS.py fusemount
+
+4. Execute ./evaluate.sh
+This file executes the basic file system operations and their result.
+
+5. Further operations can be carried out by changing to the 'fusemount' directory.
