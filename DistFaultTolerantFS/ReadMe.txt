@@ -1,4 +1,5 @@
-This is a Distributed File System implementation with Fault tolerance based on Quorum approach.
+This is a Distributed File System implementation with Fault tolerance based on Quorum approach. Here, a separate Read and Write Quorum is used to realise Fault tolerance (Quorum -> Say there are 3 servers in total and Quorum is 2, then unless and until two servers agree upon a block of data, the same cannot be read or written, ie., upto one server failure can be tolerated and corrected).
+An assumption made during the implementation is that of a single client. The client communicates to the Dataservers and the Metaserver through a Mediator. The Mediator retrives information from allt he dataservers and decide if the Quorum is met or not. If yes, server failures are transparent to the Client. Else, an error message will be sent. The dataserver stores the actual data. Metaserver holds the metadata information about the files, like the creation date, creation time, directories, hierarchy, etc.
 
 1. Say current working directory is X. Copy the files metaserver.py,dataserver.py,mediator.py,filesystem.py,fuse,py and evaluate.sh into
 directory X.
