@@ -1,4 +1,5 @@
-This is a Hiearachical Fuse FS implementation in Python.
+This is a Hiearachical Fuse FS implementation in Python extended to support remote storage. The hierarchicalFS.py file deals with the implementation of the hierarchical in-memory FUSE file system. The crux of the implementation lies in the structure and maintenence of a data structure which manages the Python file system, here, dictionaries. The code mainly deals with the realisation of the common file system fucntionalities like, Creating a directory or File, listing , renaming , changing directories, etc.
+As an extension to this basic implementation, remoteHierarchicalFS.py is constructed as a Client-Server model with the Server being a remote machine housing the data, and the client sends xmlrpc calls to the Server to retrieve or modify data. Here, the server is assumed to be the localhost itself.
 
 1. Say current working directory is X. Copy the files hierachicalFS.py, remoteHierarchicalFS.py , fuse.py, simpleht.py and evaluate.sh in directory X.
 
