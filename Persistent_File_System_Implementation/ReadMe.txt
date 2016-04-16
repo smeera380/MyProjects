@@ -1,4 +1,4 @@
-This is a Fuse file system implementation with persistence using Mongodb.
+This is a Fuse file system implementation with persistent data storage using Mongodb. i.e., remounting the File system should preserve the previously created data. The implementation also includes an in-memory caching layer in the File system, for better performance and to avoid disk access.
 
 1. Say current working directory is X. Copy the files remote_tree.py , cache_remote_tree.py and evaluate.sh into directory X.
 
